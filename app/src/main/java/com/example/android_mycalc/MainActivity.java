@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.constrayte_layout);
 
 
-
         // получаем все поля по id из activity_main в которых текст будет меняться
         textView1 = (EditText) findViewById(R.id.textView1);
         textView2 = (EditText) findViewById(R.id.textView2);
