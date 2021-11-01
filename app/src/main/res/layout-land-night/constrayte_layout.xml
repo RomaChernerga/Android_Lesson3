@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_columnSpan="4"
-    android:background="@drawable/mount"
+    android:background="@drawable/sky"
     android:orientation="horizontal">
 
     <RadioGroup
