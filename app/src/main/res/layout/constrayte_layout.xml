@@ -5,263 +5,272 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_columnSpan="4"
-    android:background="@drawable/horizon_port"
-    android:orientation="vertical">
+    android:background="@drawable/lake"
+    android:orientation="vertical"
+    android:theme="@style/LightTheme_2">
 
-    <Button
-        android:id="@+id/buttonZero"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
+    <RadioGroup
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:onClick="onNumberClick"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDot"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/buttonRes"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:onClick="onOperationClick"
-        android:text="="
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonSub"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonDot" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMyCoolStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_cool_style"
+            android:textSize="13sp" />
 
-    <Button
-        android:id="@+id/buttonDot"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:text=","
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonRes"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonZero" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialLight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/material_light"
+            android:textSize="13sp" />
 
-    <Button
-        android:id="@+id/buttonSub"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonRes" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDarkAction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/LightActionBar"
+            android:textSize="13sp" />
 
-    <Button
-        android:id="@+id/buttonFour"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="4"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSeven"
-        app:layout_constraintEnd_toStartOf="@+id/buttonFive"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/material_dark"
+            android:textSize="13sp" />
 
-    <Button
-        android:id="@+id/buttonFive"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEight"
-        app:layout_constraintEnd_toStartOf="@+id/buttonSix"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonFour" />
-
-    <Button
-        android:id="@+id/buttonDiv"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onOperationClick"
-        android:text="/"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonSix" />
-
-    <Button
-        android:id="@+id/buttonSix"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="6"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNine"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonFive" />
-
-    <Button
-        android:id="@+id/buttonSeven"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="7"
-        app:layout_constraintBottom_toTopOf="@+id/buttonZero"
-        app:layout_constraintEnd_toStartOf="@+id/buttonEight"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonEight"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="8"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDot"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNine"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonSeven" />
-
-    <Button
-        android:id="@+id/buttonNine"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onNumberClick"
-        android:text="9"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRes"
-        app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonEight" />
-
-    <Button
-        android:id="@+id/buttonAdd"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:onClick="onOperationClick"
-        android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSub"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNine" />
-
-    <Button
-        android:id="@+id/buttonClear"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text="C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSub"
-        app:layout_constraintVertical_bias="0.0" />
+    </RadioGroup>
 
 
-    <TextView
-
-        android:id="@+id/infoTextView"
-        android:layout_width="331dp"
-        android:layout_height="44dp"
-        android:inputType="number"
-        android:textSize="18dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonMult"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="20dp"
         android:onClick="onOperationClick"
         android:text="*"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDiv"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toEndOf="@+id/buttonThree"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
-    <Button
-        android:id="@+id/buttonThree"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onOperationClick"
+        android:text="/"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toEndOf="@+id/buttonSix"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMult" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+
+        android:onClick="onOperationClick"
+        android:text="-"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/buttonRes"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="7"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
         android:onClick="onNumberClick"
         android:text="3"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSix"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMult"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
         app:layout_constraintStart_toEndOf="@+id/buttonTwo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
-    <Button
-        android:id="@+id/buttonOne"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="9"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toEndOf="@+id/buttonEight"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="8"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toEndOf="@+id/buttonSeven"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="6"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toEndOf="@+id/buttonFive"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThree" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:onClick="onNumberClick"
+        android:paddingRight="@dimen/text_size_butt_port"
+        android:text="0"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSeven"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:onClick="onNumberClick"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/buttonFour"
-        app:layout_constraintEnd_toStartOf="@+id/buttonTwo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
-    <Button
-        android:id="@+id/buttonTwo"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="4"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onOperationClick"
+        android:text="="
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNine"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
         android:onClick="onNumberClick"
         android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/buttonFive"
-        app:layout_constraintEnd_toStartOf="@+id/buttonThree"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
         app:layout_constraintStart_toEndOf="@+id/buttonOne"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onNumberClick"
+        android:text="5"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintStart_toEndOf="@+id/buttonFour"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTwo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text=","
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonZero"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEight"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:onClick="onOperationClick"
+        android:text="+"
+        android:textSize="@dimen/text_size_butt_port"
+        app:cornerRadius="@dimen/RadiusButt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toEndOf="@+id/buttonNine"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
+
 
     <EditText
         android:id="@+id/textView1"
         android:layout_width="137dp"
         android:layout_height="47dp"
-        android:layout_marginTop="148dp"
-        android:textColor="@color/white"
-        android:textSize="14dp"
+        android:layout_marginTop="196dp"
+        android:textSize="@dimen/text_size_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
@@ -269,15 +278,28 @@
 
     <EditText
         android:id="@+id/textView2"
-        android:layout_width="137dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="148dp"
-        android:textColor="@color/white"
-        android:textSize="14dp"
+        android:layout_width="121dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="196dp"
+        android:textSize="@dimen/text_size_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:id="@+id/infoTextView"
+        android:layout_width="331dp"
+        android:layout_height="44dp"
+        android:inputType="number"
+        android:textSize="@dimen/text_size_output"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

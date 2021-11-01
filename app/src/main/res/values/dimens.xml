@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_butt_port">20sp</dimen>
+    <dimen name="text_size_input">18sp</dimen>
+    <dimen name="text_size_output">18dp</dimen>
+    <dimen name="textSize">19sp</dimen>
+    <dimen name="RadiusButt">8dp</dimen>
+
+</resources>
