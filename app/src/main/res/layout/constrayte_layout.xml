@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_columnSpan="4"
     android:background="@drawable/lake"
-    android:orientation="vertical"
-    android:theme="@style/LightTheme_2">
+    android:orientation="vertical">
 
     <RadioGroup
 

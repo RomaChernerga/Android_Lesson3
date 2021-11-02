@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_columnSpan="4"
     android:background="@drawable/horizon_port"
-    android:orientation="vertical"
-    android:theme="@style/LightTheme_2">
+    android:orientation="vertical">
 
     <RadioGroup
 
@@ -269,6 +268,7 @@
         android:id="@+id/textView1"
         android:layout_width="137dp"
         android:layout_height="47dp"
+        android:textColor="@color/white"
         android:layout_marginTop="196dp"
         android:textSize="@dimen/text_size_input"
         app:layout_constraintEnd_toEndOf="parent"
@@ -280,6 +280,7 @@
         android:id="@+id/textView2"
         android:layout_width="121dp"
         android:layout_height="46dp"
+        android:textColor="@color/white"
         android:layout_marginTop="196dp"
         android:textSize="@dimen/text_size_input"
         app:layout_constraintEnd_toEndOf="parent"
@@ -292,6 +293,7 @@
         android:id="@+id/infoTextView"
         android:layout_width="331dp"
         android:layout_height="44dp"
+        android:textColor="@color/white"
         android:inputType="number"
         android:textSize="@dimen/text_size_output"
         app:layout_constraintBottom_toBottomOf="parent"
