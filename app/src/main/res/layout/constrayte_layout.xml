@@ -18,29 +18,33 @@
             android:id="@+id/radioButtonMyCoolStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
             android:text="@string/my_cool_style"
-            android:textSize="13sp" />
+            android:textSize="@dimen/theme_text_size_port" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialLight"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
             android:text="@string/material_light"
-            android:textSize="13sp" />
+            android:textSize="@dimen/theme_text_size_port" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialDarkAction"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
             android:text="@string/LightActionBar"
-            android:textSize="13sp" />
+            android:textSize="@dimen/theme_text_size_port" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialDark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
             android:text="@string/material_dark"
-            android:textSize="13sp" />
+            android:textSize="@dimen/theme_text_size_port" />
 
     </RadioGroup>
 
@@ -241,7 +245,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:text=","
+        android:onClick="button_clear"
+        android:text="C"
         android:textSize="@dimen/text_size_butt_port"
         app:cornerRadius="@dimen/RadiusButt"
         app:layout_constraintBottom_toBottomOf="parent"

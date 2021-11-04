@@ -188,6 +188,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
+        android:onClick="button_clear"
         android:text="C"
         android:textSize="@dimen/text_size_butt_port"
         app:cornerRadius="@dimen/RadiusButt"

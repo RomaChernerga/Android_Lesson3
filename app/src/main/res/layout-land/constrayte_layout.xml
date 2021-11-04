@@ -20,32 +20,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/my_cool_style"
-            android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/theme_text_size_land" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialLight"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/material_light"
-            android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/theme_text_size_land" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialDarkAction"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/LightActionBar"
-            android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/theme_text_size_land" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialDark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/material_dark"
-            android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/theme_text_size_land" />
 
     </RadioGroup>
 
@@ -188,6 +188,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
+        android:onClick="button_clear"
         android:text="C"
         android:textSize="@dimen/text_size_butt_port"
         app:cornerRadius="@dimen/RadiusButt"

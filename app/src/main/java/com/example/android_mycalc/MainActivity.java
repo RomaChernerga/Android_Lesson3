@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         textView2 = (EditText) findViewById(R.id.textView2);
         infoTextView = (TextView) findViewById(R.id.infoTextView);
 
+
+
         //настройка кнопок для перекл. стилей
         findViewById(R.id.radioButtonMaterialDark).setOnClickListener(v -> {
             SaveAppTheme(AppThemeNightCodeStyle);  //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             SaveAppTheme(AppThemeDefault);  //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
             recreate();                     //пересоздаем Активити
         });
+
     }
 
     private int codeStyleToStyleId(int codeStyle){
@@ -134,6 +137,8 @@ public class MainActivity extends AppCompatActivity {
                 textView1.setText("");
             }
         }
+
+
         lastOperation = op;
         textView2.setText(lastOperation);
     }
@@ -164,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 case "+":
                     operand += number;
                     break;
+
                 case "-":
                     operand -= number;
                     break;
@@ -171,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         }
         infoTextView.setText(operand.toString().replace('.', ','));
         textView1.setText("");
+
 
     }
 
@@ -197,5 +204,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    public void button_clear(View view) {
+        textView1.setText("");
+        textView2.setText("");
+        infoTextView.setText("");
+
     }
 }

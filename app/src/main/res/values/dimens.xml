@@ -5,5 +5,7 @@
     <dimen name="text_size_output">18dp</dimen>
     <dimen name="textSize">19sp</dimen>
     <dimen name="RadiusButt">8dp</dimen>
+    <dimen name="theme_text_size_port">13sp</dimen>
+    <dimen name="theme_text_size_land">13sp</dimen>
 
 </resources>
