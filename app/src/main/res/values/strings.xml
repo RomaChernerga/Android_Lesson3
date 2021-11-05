@@ -4,5 +4,7 @@
     <string name="material_light">LightTheme_1</string>
     <string name="LightActionBar">LightTheme_2</string>
     <string name="material_dark">NewTheme</string>
+    <string name="Вернуться">Вернуться</string>
+
 
 </resources>

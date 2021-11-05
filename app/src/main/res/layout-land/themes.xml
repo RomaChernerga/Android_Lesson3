@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/moon"
+    tools:context=".Themes">
+
+    <RadioGroup
+
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMyCoolStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_cool_style"
+            android:textColor="@color/white"
+            android:textSize="@dimen/theme_text_size_land" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialLight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/material_light"
+            android:textColor="@color/white"
+            android:textSize="@dimen/theme_text_size_land" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDarkAction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/LightActionBar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/theme_text_size_land" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/material_dark"
+            android:textColor="@color/white"
+            android:textSize="@dimen/theme_text_size_land" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBack"
+            app:cornerRadius="25dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Вернуться" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

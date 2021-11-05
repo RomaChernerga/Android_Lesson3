@@ -3,6 +3,7 @@ package com.example.android_mycalc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int AppThemeNightCodeStyle = 2;
     public static final int AppThemeDefault = 3;
 
-
-
     EditText textView1; //поле для ввода числа
     EditText textView2;  // текстовое поле для вывода знака операции
     TextView infoTextView;  // вывод результата
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         // тема должна быть назначена раньше setContentView
         setTheme(loadAppTheme()); // назначить тему
@@ -47,28 +47,18 @@ public class MainActivity extends AppCompatActivity {
         infoTextView = (TextView) findViewById(R.id.infoTextView);
 
 
+        findViewById(R.id.buttonTheme).setOnClickListener(v -> {
+            Intent intent = new Intent(this, Themes.class);
 
-        //настройка кнопок для перекл. стилей
-        findViewById(R.id.radioButtonMaterialDark).setOnClickListener(v -> {
-            SaveAppTheme(AppThemeNightCodeStyle);  //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
-            recreate();                         //пересоздаем Активити
+            startActivity(intent);
+
         });
-        findViewById(R.id.radioButtonMaterialLight).setOnClickListener(v -> {
-            SaveAppTheme(AppThemeLightCodeStyle); //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
-            recreate();                         //пересоздаем Активити
-        });
-        findViewById(R.id.radioButtonMaterialDarkAction).setOnClickListener(v -> {
-            SaveAppTheme(AppThemeCodeStyle);  //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
-            recreate();                     //пересоздаем Активити
-        });
-        findViewById(R.id.radioButtonMyCoolStyle).setOnClickListener(v -> {
-            SaveAppTheme(AppThemeDefault);  //Мы создаем метод, в который будем передавать тему при нажатии на кнопки..
-            recreate();                     //пересоздаем Активити
-        });
+
 
     }
 
-    private int codeStyleToStyleId(int codeStyle){
+
+    private int codeStyleToStyleId(int codeStyle){  //применение тем
         switch (codeStyle){
             case AppThemeCodeStyle:
                 return R.style.LightTheme_2;
@@ -81,20 +71,15 @@ public class MainActivity extends AppCompatActivity {
                 return R.style.Theme_Android_MyCalc;
         }
     }
-
-    private int loadAppTheme(){
+    public int loadAppTheme(){
         int codeTheme = getSharedPreferences(PREFERENCES_NAME, MODE_PRIVATE)
                 .getInt(THEME_NAME, AppThemeDefault); //берем ранее созданные данные по сохранению темы из файла операндом get
 
-        return codeStyleToStyleId(codeTheme);
+        return codeStyleToStyleId (codeTheme);
+
+
     }
 
-    private void SaveAppTheme(int code) {                // имя файла, где будет храниться и МОД передаем
-        SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCES_NAME, MODE_PRIVATE);
-        sharedPreferences.edit()                        //операнд редактирования
-                                .putInt(THEME_NAME, code) // операнд размещения
-                                .apply();               // операнд применения(обязательно)
-    }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
@@ -189,11 +174,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+
     }
 
     @Override

@@ -8,46 +8,7 @@
     android:background="@drawable/mount"
     android:orientation="horizontal">
 
-    <RadioGroup
 
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMyCoolStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/my_cool_style"
-            android:textColor="@color/black"
-            android:textSize="@dimen/theme_text_size_land" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialLight"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/material_light"
-            android:textColor="@color/black"
-            android:textSize="@dimen/theme_text_size_land" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialDarkAction"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/LightActionBar"
-            android:textColor="@color/black"
-            android:textSize="@dimen/theme_text_size_land" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialDark"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/material_dark"
-            android:textColor="@color/black"
-            android:textSize="@dimen/theme_text_size_land" />
-
-    </RadioGroup>
 
 
     <com.google.android.material.button.MaterialButton
@@ -287,6 +248,19 @@
         app:layout_constraintStart_toEndOf="@+id/buttonOne"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.987" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:backgroundTint="#2B771E"
+        android:text="Выбрать тему"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/textView1"

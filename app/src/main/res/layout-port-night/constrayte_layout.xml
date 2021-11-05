@@ -12,41 +12,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMyCoolStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:text="@string/my_cool_style"
-            android:textSize="@dimen/theme_text_size_port" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialLight"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:text="@string/material_light"
-            android:textSize="@dimen/theme_text_size_port" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialDarkAction"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:text="@string/LightActionBar"
-            android:textSize="@dimen/theme_text_size_port" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialDark"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/white"
-            android:text="@string/material_dark"
-            android:textSize="@dimen/theme_text_size_port" />
-
-    </RadioGroup>
+        tools:ignore="MissingConstraints"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -267,6 +233,19 @@
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toEndOf="@+id/buttonNine"
         app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:backgroundTint="#17546A"
+        android:text="Выбрать тему"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <EditText
